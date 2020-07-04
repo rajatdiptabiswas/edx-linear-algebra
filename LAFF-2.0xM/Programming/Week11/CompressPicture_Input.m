@@ -9,7 +9,7 @@ imshow( B );
 
 % Choose the (approximate) number of columns you want to use for the 
 % aproximation.
-k = 30;
+k = input('k =  ');
 
 % Extract the number of rows and columns in B
 [ m, n ] = size( B )
