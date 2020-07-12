@@ -40,6 +40,7 @@ x = x / norm( x );
 disp( 'Initial random vector:' )
 disp( x )
 
+printf( '\n' )
 disp( 'iteration' );
 disp( 0 );
 
@@ -62,9 +63,10 @@ cont = 1;
 for i=1:k
     cont = input( 'continue? (0=NO, return = YES)' );
     if cont == 0
-        break;
+        error ( 'exiting' );
     end
     
+    printf( '\n' )
     disp( 'iteration' );
     disp( i );
     

@@ -7,7 +7,7 @@ k = 20;
 disp( 'input a vector of eigenvalues. e.g.: [ 4; 3; 2; 1 ]   ' );
 eigs = input('');
 
-n = size( eigs,1);
+n = size( eigs,1 );
 
 % Make sure that the first entry is equal to largest in absolute value
 [ eig_max ] = max( abs( eigs( 2:n ) ) );
@@ -42,6 +42,7 @@ x = x / norm( x );
 disp( 'Initial random vector:' )
 disp( x )
 
+printf( '\n' )
 disp( 'iteration' );
 disp( 0 );
     
@@ -61,9 +62,10 @@ cont = 1;
 for i=1:k
     cont = input( 'continue? (0=NO, return = YES)' );
     if cont == 0
-        break;
+        error( 'exiting' );
     end
     
+    printf( '\n' )
     disp( 'iteration' );
     disp( i );
     
